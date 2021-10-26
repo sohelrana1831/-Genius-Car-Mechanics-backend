@@ -59,8 +59,12 @@ async function run() {
 run().catch(console.dir);
 
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.send("Hello, Server")
+});
+
+app.get('/hello', (req, res) => {
+    res.send("Hello,Heroku Server")
 });
 
 app.listen(port, () => {
